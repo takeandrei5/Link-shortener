@@ -1,8 +1,8 @@
-import { type AppType } from 'next/app';
+import '../styles/tailwind.scss';
 
 import { trpc } from '../utils/trpc';
 
-import '../styles/globals.css';
+import type { AppType } from 'next/app';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
 	return <Component {...pageProps} />;
