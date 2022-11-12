@@ -2,7 +2,10 @@ import { LinkGenerator } from '@modules/LinkGenerator';
 import Head from 'next/head';
 
 import type { NextPage, NextPageContext } from 'next';
-import type { HomePageProps } from './types';
+
+type HomePageProps = {
+	host: string;
+};
 
 const HomePage: NextPage<HomePageProps> = ({ host }: HomePageProps) => {
 	return (
