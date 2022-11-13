@@ -54,6 +54,8 @@ const LinkGenerator = ({ host }: LinkGeneratorProps): JSX.Element => {
 		setSlug('');
 	};
 
+	console.log(generatedUrl);
+
 	return (
 		<form className='flex w-full flex-col items-center justify-center gap-2 sm:w-1/2 md:w-1/2 lg:w-1/3' onSubmit={handleOnGenerateClick}>
 			{invalid && <Typography danger>Invalid slug</Typography>}
@@ -74,7 +76,7 @@ const LinkGenerator = ({ host }: LinkGeneratorProps): JSX.Element => {
 			<Button fullWidth type='submit'>
 				Generate!
 			</Button>
-			<div className={`${!!generatedUrl ? 'opacity-100' : 'opacity-0'} flex flex-row items-center gap-2`}>
+			<div className={`${!!generatedUrl ? 'visible' : 'invisible'} flex flex-row items-center gap-2`}>
 				<Typography>{generatedUrl}</Typography>
 				<Button fullWidth onClick={onCopyButtonClick}>
 					Copy link

@@ -1,4 +1,4 @@
-import '../styles/tailwind.scss';
+import '../styles/globals.css';
 
 import { trpc } from '../utils/trpc';
 
