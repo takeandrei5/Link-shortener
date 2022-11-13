@@ -16,7 +16,8 @@ export async function middleware(request: NextRequest) {
 		return NextResponse.next();
 	}
 
-	const slug: string | undefined = request.nextUrl.pathname.split('/').pop();
+	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+	const slug: string = request.nextUrl.pathname.split('/').pop()!;
 	const getUrlResponse: Response = await fetch(`${request.nextUrl.origin}/api/get-link/${slug}`);
 
 	if (getUrlResponse.status === 404) {

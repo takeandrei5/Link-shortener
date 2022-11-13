@@ -25,7 +25,7 @@ const Input = ({
 				<Typography>{label}</Typography>
 			</label>
 			<input
-				className='w-full rounded-lg border border-pink-300 px-1 py-1 text-black hover:border-pink-400 hover:ring-0 hover:ring-pink-400 focus:outline-none'
+				className='flex-1 rounded-lg border border-pink-300 px-1 py-1 text-black hover:border-pink-400 hover:ring-0 hover:ring-pink-400 focus:outline-none'
 				id={label}
 				name={name}
 				onChange={(event: React.ChangeEvent<HTMLInputElement>) => {

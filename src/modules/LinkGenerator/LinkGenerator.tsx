@@ -55,9 +55,9 @@ const LinkGenerator = ({ host }: LinkGeneratorProps): JSX.Element => {
 	};
 
 	return (
-		<form className='flex w-full flex-col items-center justify-center gap-2 sm:w-1/2 md:w-1/2 lg:w-1/3' onSubmit={handleOnGenerateClick}>
+		<form className='flex w-full flex-col items-center justify-center gap-2 sm:w-1/2 md:w-1/2' onSubmit={handleOnGenerateClick}>
 			{invalid && <Typography danger>Invalid slug</Typography>}
-			<div className='flex w-full flex-row gap-2'>
+			<div className='flex w-full flex-row items-center gap-2'>
 				<Input id='urn' initialValue={slug} label={host} placeHolder='random' name='urn' onChange={setSlug} required />
 				<Button onClick={handleOnRandomClick}>Randomize</Button>
 			</div>
