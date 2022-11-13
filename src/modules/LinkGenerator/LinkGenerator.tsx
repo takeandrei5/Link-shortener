@@ -54,8 +54,6 @@ const LinkGenerator = ({ host }: LinkGeneratorProps): JSX.Element => {
 		setSlug('');
 	};
 
-	console.log(generatedUrl);
-
 	return (
 		<form className='flex w-full flex-col items-center justify-center gap-2 sm:w-1/2 md:w-1/2 lg:w-1/3' onSubmit={handleOnGenerateClick}>
 			{invalid && <Typography danger>Invalid slug</Typography>}
