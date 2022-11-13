@@ -74,11 +74,9 @@ const LinkGenerator = ({ host }: LinkGeneratorProps): JSX.Element => {
 			<Button fullWidth type='submit'>
 				Generate!
 			</Button>
-			<div className={`${!!generatedUrl ? 'visible' : 'invisible'} flex flex-row items-center gap-2`}>
+			<div className={`${!!generatedUrl ? 'visible' : 'invisible'} flex w-full flex-row items-center justify-center gap-2`}>
 				<Typography>{generatedUrl}</Typography>
-				<Button fullWidth onClick={onCopyButtonClick}>
-					Copy link
-				</Button>
+				<Button onClick={onCopyButtonClick}>Copy link</Button>
 			</div>
 		</form>
 	);
